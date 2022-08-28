@@ -1,0 +1,40 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    width: 500px;
+    height: 300px;
+    margin: 50px auto;
+    align-items: center;
+}
+
+#container h2 {
+    color: rgb(13, 87, 177);
+}
+
+#quotes {
+    width: 90%;
+    text-align: center;
+    font-weight: 500;
+}
+
+#Quote_author {
+    text-align: center;
+    font-weight: 900;
+    font-style: italic;
+}
+
+#button {
+    width: 180px;
+    margin-top: 25px;
+    border: 2px solid rgb(4, 35, 173);
+    background-color: wheat;
+    font-weight: bold;
+    padding: 2px;
+}
+
+#button:hover {
+    cursor: pointer;
+    background: rgb(116, 78, 152);
+    color: rgb(34, 252, 63);
+}

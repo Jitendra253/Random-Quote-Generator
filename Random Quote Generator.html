@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <h2>Get Your Daily Quote</h2>
+        <div id="quote_area">
+            <p id="quotes">The purpose of our lives is to be happy.</p>
+            <p id="Quote_author">-Dalai Lama</p>
+        </div>
+
+        <div id="quote_button">
+            <input type="button" id="button" onclick="myfunction()" value="Click Me">
+        </div>
+
+    </div>
+    <script>
+        var all_quotes = [{
+                quote: "The purpose of our lives is to be happy.",
+
+
+                author: " Dalai Lama "
+
+            },
+            {
+                quote: "Life is what happens when you're busy making other plans.",
+                author: " John Lennon"
+            },
+            {
+                quote: "Get busy living or get busy dying.",
+                author: "Stephen King"
+            },
+            {
+                quote: "You only live once, but if you do it right, once is enough.",
+
+
+                author: "Mae West"
+            },
+            {
+                quote: "If you want to live a happy life, tie it to a goal, not to people or things",
+
+                author: "Albert Einstein"
+            },
+            {
+                quote: "Never let the fear of striking out keep you from playing the game.",
+
+
+                author: "Babe Ruth"
+            },
+            {
+                quote: "Not how long, but how well you have lived is the main thing.",
+
+                author: "Seneca"
+            }
+
+
+        ]
+        const button = document.getElementById('button');
+
+        function myfunction() {
+            //creatingnew random number to attach to a quote 
+            var quote_length = all_quotes.length;
+            var random_number = Math.floor(Math.random() * quote_length);
+            //set a new quote
+            var new_quote = all_quotes[random_number].quote;
+            var new_author = all_quotes[random_number].author;
+            var quote_area = document.getElementById('quote_area');
+            quote_area.innerHTML = `<p id="quotes">${new_quote}</p>
+        <p id="Quote_author"> -${new_author}</p> `;
+        };
+    </script>
+
+</body>
+
+</html>
